@@ -19,3 +19,9 @@ request5 = requests.get(url + '/data5_array.json')
 print request5.status_code, request5.content, request5.json()
 print [item for item in request5.json()]
 
+result6 = requests.get(url + '/data_post_obj_new.json')
+print result6.status_code
+postContent = result6.json()
+for key, value in postContent.items():
+    print 'key = ' + str(key) + ', value = ' + str(value)
+    print 'content = ' + str([subkey + ':' + str(subvalue)] for subkey, subvalue in value.items())
