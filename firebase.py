@@ -17,5 +17,5 @@ array1 = ['Mark', True, 3.1415926, None, '2.968', 0, 2.968]
 request5 = requests.put(url + '/data5_array.json', json=array1)
 print request5.status_code, request5.content
 # /代表路徑
-request6 = requests.put(url + '/can/be/any/path/sample.json', json='Hello World ' + str(datetime.datetime.utcnow()))
+request6 = requests.put(url + '/can/be/any/path/sample.json', json='Hello World ' + str(datetime.datetime.now()))
 print request6.status_code, request6.content
